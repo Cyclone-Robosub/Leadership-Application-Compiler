@@ -23,17 +23,14 @@
   title: "Leadership Application for " + first + " \"" + preferred + "\" " + last
 )
 
-#page(
-  height: auto,
-  width: auto,
-  margin: 0pt,
-  image(image-path, page: 1)
-)
+
 
 #set text(
-  font: "Barlow",
-  12pt
+  font: "Lato",
+  11pt
 )
+
+// #show grid.cell.where(x: 1): set align(right)
 
 #set page(
   paper: "us-letter",
@@ -86,6 +83,14 @@ This is the place to mention any relevant skills or experiences that you think w
 ]
 
 #essay-3
+
+#page(
+  height: auto,
+  width: auto,
+  margin: 0pt,
+  header: none,
+  image(image-path, page: 1)
+)
 
 // #pagebreak()
 #if closing != none and closing != "\n" and closing != " "  [

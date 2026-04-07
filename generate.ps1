@@ -10,7 +10,7 @@ if (-not (Test-Path -Path $exportPath)) {
 
 foreach ($row in $data) {
     # Sanitize the name for the FILENAME (Last, First)
-    $safeName = "$($row.last), $($row.first)" -replace '[:;\\/|?*<>]', '-'
+    $safeName = "$($row.first) $($row.last)" -replace '[:;\\/|?*<>]', '-'
     
     Write-Host "Generating Application PDF for: $($row.first) $($row.last)" -ForegroundColor Yellow
     
